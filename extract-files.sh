@@ -59,4 +59,8 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
-. "$MY_DIR"/setup-makefiles.sh
+"${MY_DIR}/setup-makefiles.sh"
+
+# Load camera.sdm660.so shim
+CAM_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
+patchelf --add-needed camera.sdm660_shim.so "$CAM_SDM660"
