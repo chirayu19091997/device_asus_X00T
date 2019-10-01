@@ -510,7 +510,7 @@ else
 
         # Enable adaptive LMK for all targets &
         # use Google default LMK series for all 64-bit targets >=2GB.
-        echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+        echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
         # Enable oom_reaper
         if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
@@ -2624,13 +2624,26 @@ case "$target" in
             echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 
             # Start cdsprpcd only for sdm660 and disable for sdm630
-            #start vendor.cdsprpcd disable sdm636 for M1 by yukai@AMT
+            start vendor.cdsprpcd
 
+            # Start Host based Touch processing
+                case "$hw_platform" in
+                        "MTP" | "Surf" | "RCM" | "QRD" )
+                        start_hbtp
+                        ;;
+                esac
             ;;
         esac
         #Apply settings for sdm630 and Tahaa
         case "$soc_id" in
             "318" | "327" | "385" )
+
+            # Start Host based Touch processing
+            case "$hw_platform" in
+                "MTP" | "Surf" | "RCM" | "QRD" )
+                start_hbtp
+                ;;
+            esac
 
             # Setting b.L scheduler parameters
             echo 85 > /proc/sys/kernel/sched_upmigrate
@@ -5037,9 +5050,6 @@ case "$target" in
     "msm8974")
         start mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-    ;;
-    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe" | "sm6150" | "kona" | "lito" | "trinket" | "atoll" )
-        setprop vendor.post_boot.parsed 1
     ;;
     "apq8084")
         rm /data/system/perfd/default_values
