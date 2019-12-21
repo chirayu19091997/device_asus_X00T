@@ -251,6 +251,9 @@ VENDOR_SECURITY_PATCH := 2019-12-01
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/minimal_sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
+
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
