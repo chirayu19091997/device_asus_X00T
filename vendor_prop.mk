@@ -235,3 +235,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable rescue party
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
+
+# Dpi
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=450
