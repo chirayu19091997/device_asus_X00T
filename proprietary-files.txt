@@ -44,12 +44,12 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# ANT+ - from lavender - PKQ1.180904.001 V10.2.3.0.PFGCNXM
--lib/libantradio.so|d1f41ee14d4cd7b3a306a628bca5cc9e19027201
-lib64/com.qualcomm.qti.ant@1.0.so|3a19c81d66ef1190d0b2f361420d5cbf707cc600
--lib64/libantradio.so|456b6b2fda1450c852ad0b766143b9cf3c61cde0
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|44294189280e86d95538bc51bdccd87b3f010f27
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|474187a8132aabd45089cacd2f8de9a6d9f449a3
+# ANT+ - from  lavender-user-9-PKQ1.180904.001-V11.0.6.0.PFGINXM-release-keys
+-lib/libantradio.so|d41385a586a43d1c1ed1e315b65fa26bd2393411
+lib64/com.qualcomm.qti.ant@1.0.so|29ecc1a9134dd2146f358e65c830059d3fa6c6d9
+-lib64/libantradio.so|68dd86841ef99508967f3bc28103bda402cee915
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|05e6190e6feb2f23b86e1ce4517b73712465bb2d
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|50056005be5fe5a8420599dd70e4266abf6a9866
 
 # Audio
 vendor/bin/audioflacapp
@@ -942,65 +942,65 @@ vendor/firmware/a512_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Graphics (Adreno) - from chiron - PKQ1.190118.001 9.3.21
-vendor/lib/egl/eglSubDriverAndroid.so|2dc3ea90fd0e6c7ad1864a23cf736eedcfa4c985
-vendor/lib/egl/libEGL_adreno.so|adfa25a02996babb29fe6752ef01a25d9482f7d8
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so|5389e32a9ae4ba44a065f040918f0cd92d07d62a
-vendor/lib/egl/libQTapGLES.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/libC2D2.so
-vendor/lib/libCB.so|322d998e2f84b50b0ee1c1d94b878dd5462844df
-vendor/lib/libOpenCL.so
-vendor/lib/libRSDriver_adreno.so|fcffcda22b58c3d4386c8bd516058867b15106f1
-vendor/lib/libadreno_utils.so|9930d4a99e10bdc821e3609695100248d36b3913
-vendor/lib/libbccQTI.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so|e146ac9ad1704a1a8fca08691d07de0581d04c65
-vendor/lib/libllvm-qcom.so|155abdaf29390e44b5d363c74ab47f6fb8109d23
-vendor/lib/libpvr.so|d73e0721160cc6e97d4abe268f7e346bed038b16
-vendor/lib/librs_adreno_sha1.so|722fc73504df7cb5433075eb40ae3d96d2db2d2d
-vendor/lib/librs_adreno.so|a55840ae19e21c81948e2cba576bbd58a1ca836e
-vendor/lib64/egl/eglSubDriverAndroid.so|2f3edc8062166bc55cdfbc27fc2e5dc0dd3c5cbc
-vendor/lib64/egl/libEGL_adreno.so|62929bf23ecea823418910defed80bad5fc3416c
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so|eac7d67b9b2c0155a2e9c0d36afc8cde1c496463
-vendor/lib64/egl/libQTapGLES.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so|0ba6fafb7cc62c08b9a9dd86f74418590e358998
-vendor/lib64/libOpenCL.so
-vendor/lib64/libRSDriver_adreno.so|38c235631783ad242bbfc791260b77fd363395dd
-vendor/lib64/libadreno_utils.so|c2a2afcee56cad745ad5444c3385fb74c0fb9ff2
-vendor/lib64/libbccQTI.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so|72939cc5f8cf2840764f67bf5e40b820fbd212fc
-vendor/lib64/libllvm-qcom.so|0926cc1965f44273bf84d98a82bf8402e86750a7
-vendor/lib64/libpvr.so|e3b65544a96278e0f4374eab222429c8373d20da
-vendor/lib64/librs_adreno_sha1.so|37ce2f7dfdd316dce16279f1d303a6672a70afd5
-vendor/lib64/librs_adreno.so|58e697ffe5c4b76942118d4b3ca43464db7a4924
+# Graphics (Adreno) - from stock - PKQ1.WW_Phone-16.2017.1912.060-20191125
+vendor/lib/egl/eglSubDriverAndroid.so|4b14f0a47090c851adfe6e50bcc078f74f91dd33
+vendor/lib/egl/libEGL_adreno.so|f6f748b3b96513beffb7fa2b8bdedbbd80ffc320
+vendor/lib/egl/libGLESv1_CM_adreno.so|0930a64d8889c184de31a085539e1b8b28520a31
+vendor/lib/egl/libGLESv2_adreno.so|1bea20c3f9518bfe551704d384011566e0c66e55
+vendor/lib/egl/libQTapGLES.so|7641cd4f894d86f53394bcdc421ecae254afaf30
+vendor/lib/egl/libq3dtools_adreno.so|a2506b94eb0fe3c2bccc7c8e6d8b8d21bd314ae8
+vendor/lib/egl/libq3dtools_esx.so|9116ff1328163d82ca624ea02f09d80ec0f055dc
+vendor/lib/libC2D2.so|a110bf0568eef9e49b251b7750cf6e51c3c85969
+vendor/lib/libCB.so|7f24952e5331ffb7f9218d9b15a2227b98e04925
+vendor/lib/libOpenCL.so|fbf2d8e82973ea44583f1ca6a624163759167a73
+vendor/lib/libRSDriver_adreno.so|7e6b61cb975de2029ea6debe4fe442852da06e00
+vendor/lib/libadreno_utils.so|34023494194932a62c70d82c60d4f6cf2e64b58f
+vendor/lib/libbccQTI.so|aa1220cad9df3c39c0c14c4a36546342cc518ad1
+vendor/lib/libc2d30_bltlib.so|e9767a3e4e674d42f23f5482471d38973e038d45
+vendor/lib/libgsl.so|665a6668c528cbf0681e266ddf0e3e78977cafe8
+vendor/lib/libllvm-glnext.so|9458f6675858ae9e4759d02d295c6887019e0e58
+vendor/lib/libllvm-qcom.so|826fd36b002899d55d5680f32fb942b3fe17e020
+vendor/lib/libpvr.so|4538ce6f1db3ff0c55772f0a916996f14199980c
+vendor/lib/librs_adreno_sha1.so|693ebd0d351f84358e444bb97233f5b5e6375d8e
+vendor/lib/librs_adreno.so|41b2a1b35a8a9966728cea607bf5b7a8f568680d
+vendor/lib64/egl/eglSubDriverAndroid.so|0cf3c7717ada28a99036114ff21b97695d136a47
+vendor/lib64/egl/libEGL_adreno.so|687b2e53dc5080c05d84da9ec707cf0c31de4d9b
+vendor/lib64/egl/libGLESv1_CM_adreno.so|95497830d4e08c02a3b6d82bc7623f926d2ef9ed
+vendor/lib64/egl/libGLESv2_adreno.so|cec72160cf7de1e3903397da7d5ce11f61a179d4
+vendor/lib64/egl/libQTapGLES.so|dac820eea4d54f98f7e20a49b82404de6f09743b
+vendor/lib64/egl/libq3dtools_adreno.so|4bd18c19a4d8376311983303b0971a7aa1334897
+vendor/lib64/egl/libq3dtools_esx.so|19d96756fda3f1ba0251c041120d1d4f3a5a8d03
+vendor/lib64/libC2D2.so|724684ac0e167bc729cbdea1ee9e21da248cfd58
+vendor/lib64/libCB.so|6db7a6b99b2b042df75ed3b68c863c8b0f79617f
+vendor/lib64/libOpenCL.so|1e78c9b98378803703835a3e1cbfabf43318f341
+vendor/lib64/libRSDriver_adreno.so|3d77fb21a40b98e908840aa89d044aea4f695694
+vendor/lib64/libadreno_utils.so|4b9072beb7ce486163966d6a12d8edd7e92830b5
+vendor/lib64/libbccQTI.so|be1ae3a075c42dcb19bc6e1ecd7374f9aeae083c
+vendor/lib64/libc2d30_bltlib.so|e950f918802d3d3e656ab4f0fe731bb60e1b357e
+vendor/lib64/libgsl.so|f45d67c2bb1dc10609ae2936256834c225b26334
+vendor/lib64/libllvm-glnext.so|14f95cb18e5abf8199d20d5774c3280fdb6791c6
+vendor/lib64/libllvm-qcom.so|af571c2113bf5b74e58a808a33e4ec4e57915088
+vendor/lib64/libpvr.so|a766fdd5757fc0b7df96f7b37a7949881ab75a72
+vendor/lib64/librs_adreno_sha1.so|b018ab29bd865c5c63c3772fa024dd58dcf17fff
+vendor/lib64/librs_adreno.so|b6bc2274fc4079818f3124a694348a890c5d7b07
 
-# Graphics (HDR) - from chiron - PKQ1.190118.001 9.3.21
-vendor/lib/libhdr_tm.so|17705b090e4e8b487a39071b2f46a45324d611a6
-vendor/lib64/libhdr_tm.so|a44d285a08aa30ef90e791c646b9c12a697a30b2
+# Graphics (HDR) - from Stock - PKQ1.WW_Phone-16.2017.1912.060-20191125
+vendor/lib/libhdr_tm.so|a503a7ff7cc509ba538609046bd6169efeff6d0d
+vendor/lib64/libhdr_tm.so|710d5a92dfd441c51197851f9f7bde20bd244d02
 
-# Graphics (SDM) - from chiron - PKQ1.190118.001 9.3.21
-vendor/lib/libqseed3.so
-vendor/lib/libsdm-color.so|8e083bb2a20ecf76bf96e303134cbaa9ce46be81
+# Graphics (SDM) - from stock - PKQ1.WW_Phone-16.2017.1912.060-20191125
+vendor/lib/libqseed3.so|c60e08f5efa1e9aea339a7a5a6dccdc2d107f530
+vendor/lib/libsdm-color.so|5bb957a6b1f7b53be169fae859087ed8a6ee5dd2
 vendor/lib/libsdm-diag.so|e0455e9dd0e2378a3f770eb914aa11e612d594eb
 vendor/lib/libsdm-disp-vndapis.so|f81628ddf7fff00f5e316956ed3b50941932c7de
-vendor/lib/libsdmextension.so|5eec37b5457ffb8ec5e82e6366cf7652eefc0a5e
-vendor/lib/libtinyxml2_1.so|0960b3c008d818be73774e345c2f0f1c1e5873cd
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so|1a9b68e5f2f09d37c2fa83907a6a70c7adb081f5
+vendor/lib/libsdmextension.so|e1dc37e4742268ab54e247dcbbcce7d38c44c305
+vendor/lib/libtinyxml2_1.so|20fea724b7a9f94530833cfdc841049104a0ffa3
+vendor/lib64/libqseed3.so|f95dd7b55de9401ce2f568e3ec18493daa5a6bfe
+vendor/lib64/libsdm-color.so|a8694fab7b66b1c6ef44c6c1889e8e7d12f88682
 vendor/lib64/libsdm-diag.so|25bab19a8c4453b3d20e3e1a71a0e8d3675b17b4
 vendor/lib64/libsdm-disp-vndapis.so|8ac59a32a2601a8a4b0d3b097ed02f1279f3c6b7
-vendor/lib64/libsdmextension.so|5a33c4cd669d745e47110ec81a71fd9df7ca0608
-vendor/lib64/libtinyxml2_1.so|a2d9661cf2bb426e72ba15fd1a6a4eec940418a5
+vendor/lib64/libsdmextension.so|d137e0af665219eea241facbde4eedf2676cbc39
+vendor/lib64/libtinyxml2_1.so|9d5179eda8ce70b9a4014b144f9d23d33509fddc
 
 # Graphics (Vulkan)
 vendor/lib/hw/vulkan.sdm660.so
@@ -1264,8 +1264,8 @@ vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 
-# Radio (QTI telephony) - from jasmine - PKQ1.180904.001 V10.0.1.0.PDIMIFJ
-framework/qti-telephony-common.jar|5362cf7dc277ff53ef33868b44027ca9a07e29f3
+# Radio (QTI telephony) - from stock - PKQ1.WW_Phone-16.2017.1912.060-20191125
+framework/qti-telephony-common.jar|65fb4322f4b1c2393ddbd099c9753bbff1a89e20
 
 # Sensors
 vendor/bin/sensors.qti
