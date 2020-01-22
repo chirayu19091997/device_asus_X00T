@@ -1402,6 +1402,14 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|9cf774301dfb59173cc2a6871ff851ea6b546f39
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|5815859dc07d3181901596d06612b379e86fe6fd
 
+# TUI - from jasmine-user-10-QKQ1.190910.002-V11.0.4.0.QDIMIXM-release-keys
+product/lib/vendor.qti.hardware.tui_comm@1.0.so|313677dd28de6f6b2a5cf8b136d8ce0723bb5a65
+product/lib64/vendor.qti.hardware.tui_comm@1.0.so|b478f9ba87abd265ac15a154ab7412fed5839664
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|a0d692fe10ef9dc4479497fa666640612f06fbb4
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|f34f921b3e2a889cada5f9588009aae11af46a96
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|e47baed52f1c0637de34fa55e45a86b4b412a672
+
 # Thermal
 vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
