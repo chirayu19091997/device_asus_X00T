@@ -523,3 +523,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
 
 $(call inherit-product, vendor/asus/X00T/X00T-vendor.mk)
+
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
