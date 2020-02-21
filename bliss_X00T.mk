@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Inherit some common revengeos stuff
-$(call inherit-product, vendor/revengeos/config/common.mk)
+# Inherit some common bliss stuff
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Inherit from X00T device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,8 +31,9 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00T
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := revengeos_X00T
-REVENGEOS_BUILDTYPE := OFFICIAL
+PRODUCT_NAME := bliss_X00T
+BLISS_BUILDTYPE := OFFICIAL
+BLISS_DEVELOPER := ChaitanayaMittal
 TARGET_BOOT_ANIMATION_RES := 1080
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
