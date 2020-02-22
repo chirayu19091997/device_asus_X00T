@@ -1470,11 +1470,7 @@ vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal@2.0-service.mock
 vendor/bin/thermal-engine
-vendor/etc/init/android.hardware.thermal@2.0-service.rc
-vendor/etc/thermal-engine.conf
-vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.xml
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
