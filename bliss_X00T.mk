@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Inherit PixelGApps
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
 # Inherit some common bliss stuff
 $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
@@ -35,6 +38,8 @@ PRODUCT_NAME := bliss_X00T
 BLISS_BUILDTYPE := OFFICIAL
 BLISS_DEVELOPER := ChaitanayaMittal
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
 TARGET_VENDOR := asus
