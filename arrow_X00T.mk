@@ -25,8 +25,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit PixelGApps
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 
-# Inherit some common bliss stuff
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+# Inherit some common arrow stuff
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit from X00T device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -34,9 +34,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00T
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := bliss_X00T
-BLISS_BUILDTYPE := OFFICIAL
-BLISS_DEVELOPER := ChaitanayaMittal
+PRODUCT_NAME := arrow_X00T
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true

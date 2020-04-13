@@ -180,8 +180,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     ro.config.vc_call_vol_steps=11 \
     ro.ril.ecclist=112,911 \
-    ro.telephony.default_network=20,20 \
-    telephony.lteOnCdmaDevice=1 \
+#    ro.telephony.default_network=20,20 \
+#    telephony.lteOnCdmaDevice=1 \
     ro.telephony.iwlan_operation_mode=legacy \
     persist.vendor.radio.flexmap_type=none \
     persist.sys.fflag.override.settings_network_and_internet_v2=true
@@ -235,3 +235,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=450
+
+# FOSS CONFIGS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qcom.dpps.sensortype=3
+    ro.qualcomm.display.paneltype=1
+    ro.qualcomm.foss=1
+    config.foss.xml=1
+    config.foss.path=/vendor/etc/FOSSConfig.xml
+
+# USB debugging at boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
+
+# Default LTE selection
+PRODUCT_PROPERTY_OVERRIDES += \
+   telephony.lteOnGsmDevice=1 \
+    ro.telephony.default_network=9 \
+    ro.ril.def.preferred.network=9

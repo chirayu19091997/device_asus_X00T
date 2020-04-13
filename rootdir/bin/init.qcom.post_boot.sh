@@ -1406,7 +1406,7 @@ case "$target" in
                 echo 0 > /sys/devices/system/cpu/cpu6/sched_prefer_idle
                 echo 0 > /sys/devices/system/cpu/cpu7/sched_prefer_idle
 
-                echo 0 > /proc/sys/kernel/sched_boost
+                echo 1 > /proc/sys/kernel/sched_boost
 
                 for devfreq_gov in /sys/class/devfreq/*qcom,mincpubw*/governor
                 do
@@ -1649,7 +1649,7 @@ case "$target" in
                 echo 20 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_load
                 echo 20 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_load
 
-                echo 0 > /proc/sys/kernel/sched_boost
+                echo 1 > /proc/sys/kernel/sched_boost
 
                 # Bring up all cores online
                 echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -1767,7 +1767,7 @@ case "$target" in
             platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
         fi
 
-        echo 0 > /proc/sys/kernel/sched_boost
+        echo 1 > /proc/sys/kernel/sched_boost
 
         case "$soc_id" in
             "293" | "304" | "338" | "351")
@@ -2133,7 +2133,7 @@ case "$target" in
                 echo 20000000 > /proc/sys/kernel/sched_ravg_window
 
                 #disable sched_boost in 8917
-                echo 0 > /proc/sys/kernel/sched_boost
+                echo 1 > /proc/sys/kernel/sched_boost
 
 		# core_ctl is not needed for 8917. Disable it.
                 disable_core_ctl
@@ -2221,7 +2221,7 @@ case "$target" in
                 echo 20000000 > /proc/sys/kernel/sched_ravg_window
 
                 #disable sched_boost in 8937
-                echo 0 > /proc/sys/kernel/sched_boost
+                echo 1 > /proc/sys/kernel/sched_boost
 
                 for devfreq_gov in /sys/class/devfreq/qcom,mincpubw*/governor
                 do
@@ -2427,7 +2427,7 @@ case "$target" in
                 configure_memory_parameters
 
                 #disable sched_boost
-                echo 0 > /proc/sys/kernel/sched_boost
+                echo 1 > /proc/sys/kernel/sched_boost
 
                 # Disable L2-GDHS low power modes
                 echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled
@@ -2926,7 +2926,7 @@ case "$target" in
             echo 0-5 > /dev/cpuset/system-background/cpus
 
             # Turn off scheduler boost at the end
-            echo 0 > /proc/sys/kernel/sched_boost
+            echo 1 > /proc/sys/kernel/sched_boost
 
             # Turn on sleep modes.
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
@@ -3051,7 +3051,7 @@ case "$target" in
             echo 0 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
 
             # Turn off scheduler boost at the end
-            echo 0 > /proc/sys/kernel/sched_boost
+            echo 1 > /proc/sys/kernel/sched_boost
 
             # Turn on sleep modes.
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
@@ -3203,7 +3203,7 @@ case "$target" in
             echo 0-5 > /dev/cpuset/system-background/cpus
 
             # Turn off scheduler boost at the end
-            echo 0 > /proc/sys/kernel/sched_boost
+            echo 1 > /proc/sys/kernel/sched_boost
 
             # Turn on sleep modes.
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
@@ -3342,7 +3342,7 @@ case "$target" in
                 echo 0-5 > /dev/cpuset/system-background/cpus
 
                 # Turn off scheduler boost at the end
-                echo 0 > /proc/sys/kernel/sched_boost
+                echo 1 > /proc/sys/kernel/sched_boost
 
                 # Turn on sleep modes.
                 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
@@ -3538,7 +3538,7 @@ case "$target" in
     echo 0-5 > /dev/cpuset/system-background/cpus
 
     # Turn off scheduler boost at the end
-    echo 0 > /proc/sys/kernel/sched_boost
+    echo 1 > /proc/sys/kernel/sched_boost
 
     # Turn on sleep modes
     echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
@@ -3670,7 +3670,7 @@ case "$target" in
     echo 0-5 > /dev/cpuset/system-background/cpus
 
     # Turn off scheduler boost at the end
-    echo 0 > /proc/sys/kernel/sched_boost
+    echo 1 > /proc/sys/kernel/sched_boost
 
     # Turn on sleep modes
     echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
@@ -3789,7 +3789,7 @@ case "$target" in
             echo 0-5 > /dev/cpuset/system-background/cpus
 
             # Turn off scheduler boost at the end
-            echo 0 > /proc/sys/kernel/sched_boost
+            echo 1 > /proc/sys/kernel/sched_boost
 
             # Turn on sleep modes.
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
@@ -4135,7 +4135,7 @@ case "$target" in
         echo "0:1324800 2:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         # Setting b.L scheduler parameters
-        echo 0 > /proc/sys/kernel/sched_boost
+        echo 1 > /proc/sys/kernel/sched_boost
         echo 1 > /proc/sys/kernel/sched_migration_fixup
         echo 45 > /proc/sys/kernel/sched_downmigrate
         echo 45 > /proc/sys/kernel/sched_upmigrate
@@ -4336,7 +4336,7 @@ case "$target" in
         echo 0-3 > /dev/cpuset/system-background/cpus
 
 	# Turn off scheduler boost at the end
-        echo 0 > /proc/sys/kernel/sched_boost
+        echo 1 > /proc/sys/kernel/sched_boost
 	# Disable CPU Retention
         echo N > /sys/module/lpm_levels/L3/cpu0/ret/idle_enabled
         echo N > /sys/module/lpm_levels/L3/cpu1/ret/idle_enabled
@@ -4394,7 +4394,7 @@ case "$target" in
 	echo 0-3 > /dev/cpuset/system-background/cpus
 
 	# Turn off scheduler boost at the end
-	echo 0 > /proc/sys/kernel/sched_boost
+	echo 1 > /proc/sys/kernel/sched_boost
 
 	# configure governor settings for silver cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
@@ -4598,7 +4598,7 @@ case "$target" in
 	echo 0-3 > /dev/cpuset/system-background/cpus
 
 	# Turn off scheduler boost at the end
-	echo 0 > /proc/sys/kernel/sched_boost
+	echo 1 > /proc/sys/kernel/sched_boost
 
 	# configure governor settings for silver cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
@@ -4906,7 +4906,7 @@ case "$target" in
 
         echo 0-3 > /dev/cpuset/background/cpus
         echo 0-3 > /dev/cpuset/system-background/cpus
-        echo 0 > /proc/sys/kernel/sched_boost
+        echo 1 > /proc/sys/kernel/sched_boost
 
         # Set Memory parameters
         configure_memory_parameters
@@ -5211,3 +5211,18 @@ esac
 misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
 real_path=${misc_link##*>}
 setprop persist.vendor.mmi.misc_dev_path $real_path
+
+
+# Set idle GPU to 133 Mhz
+write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 7
+
+# disable wakelocks
+write /sys/module/wakeup/parameters/enable_qcom_rx_wakelock_ws 0
+write /sys/module/wakeup/parameters/enable_wlan_extscan_wl_ws 0
+write /sys/module/wakeup/parameters/enable_ipa_ws 0
+write /sys/module/wakeup/parameters/enable_wlan_ws 0
+write /sys/module/wakeup/parameters/enable_timerfd_ws 0
+write /sys/module/wakeup/parameters/enable_netlink_ws 0
+write /sys/module/wakeup/parameters/enable_netmgr_wl_ws 0
+write /sys/module/wakeup/parameters/enable_wlan_pno_wl_ws 0
+write /sys/module/wakeup/parameters/enable_wcnss_filter_lock_ws 0
